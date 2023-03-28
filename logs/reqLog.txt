@@ -1,0 +1,7 @@
+20230328	15:13:26	67ed76c4-7209-4be9-ad73-c4c18106b0f5	/new-page.html	GET
+20230328	15:13:26	278a2a63-6ab8-49ae-8e54-31ba5a6ff5a4	/css/style.css	GET
+20230328	15:13:26	4f9d98c4-3176-4e7b-aa49-83646857e9a2	/img/img1.jpg	GET
+20230328	15:14:34	9b8d179f-e783-419b-afa2-671722b3e53d	/new-page.html	GET
+20230328	15:14:50	a3faba89-94d4-4dbd-91f8-10ca2ce5e2c7	/new-page.html	GET
+20230328	15:14:50	9fbddef0-b3e9-4878-a3a4-c18161860bb0	/css/style.css	GET
+20230328	15:14:50	251df26c-9dda-41f2-b46b-2460993ffdad	/img/img1.jpg	GET
