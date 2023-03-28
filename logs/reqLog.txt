@@ -5,3 +5,5 @@
 20230328	15:14:50	a3faba89-94d4-4dbd-91f8-10ca2ce5e2c7	/new-page.html	GET
 20230328	15:14:50	9fbddef0-b3e9-4878-a3a4-c18161860bb0	/css/style.css	GET
 20230328	15:14:50	251df26c-9dda-41f2-b46b-2460993ffdad	/img/img1.jpg	GET
+20230328	16:46:28	8d862f3b-a1e9-4c80-be34-f86737994b5c	/	GET
+20230328	16:46:28	deb1932c-e225-416c-b620-b5f178ad0f53	/css/style.css	GET
