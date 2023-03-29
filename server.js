@@ -25,8 +25,18 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false }));
+
+// built-in middleware for json
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/public")));
+
+// serve static files
+app.use("/", express.static(path.join(__dirname, "/public")));
+app.use("/subdir", express.static(path.join(__dirname, "/public")));
+
+// routes
+app.use("/", require("./routes/root"));
+app.use("/subdir", require("./routes/subdir"));
+app.use("/employees", require("./routes/api/employees"));
 
 app.get("^/$|/index(.html)?", (req, res) => {
   // res.sendFile("./views/index.html", { root: __dirname });
@@ -42,36 +52,6 @@ app.get("/old-page(.html)?", (req, res) => {
   // res.sendFile("./views/index.html", { root: __dirname });
   res.redirect(301, "/new-page.html");
 });
-
-// Route handlers
-app.get(
-  "/hello(.htmls)?",
-  (req, res, next) => {
-    console.log("attempted to load hello.html");
-    next();
-  },
-  (req, res) => {
-    res.send("Hello, World!");
-  }
-);
-
-// chaining route handlers
-const one = (req, res, next) => {
-  console.log("one");
-  next();
-};
-
-const two = (req, res, next) => {
-  console.log("two");
-  next();
-};
-
-const three = (req, res) => {
-  console.log("three");
-  res.send("Finished!");
-};
-
-app.get("/chain(.html)?", [one, two, three]);
 
 app.all("*", (req, res) => {
   res.status(404);
