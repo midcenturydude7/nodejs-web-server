@@ -298,3 +298,12 @@
 20230330	17:02:08	56f22f76-c1bd-4239-8bb6-9a47fec818d2	POST	undefined	/auth
 20230330	17:02:22	0da7cdc8-dc11-4b60-9bd9-840ac3f8f5ac	DELETE	undefined	/employees
 20230330	17:02:27	c142ac3e-c927-4d55-ab19-44f97819414e	GET	undefined	/employees
+20230330	20:32:50	d35c2290-9070-4d9c-a27d-6f85bf19fb53	GET	undefined	/
+20230330	20:32:51	bc0638d7-7e12-4518-ab38-f83475a4e421	GET	undefined	/css/style.css
+20230330	20:32:51	fd3c0b94-1323-4f74-ba21-9ec2cd8cd169	GET	undefined	/favicon.ico
+20230330	20:33:49	1ab1b83f-72f1-494f-bfb5-ed347f93f97b	OPTIONS	http://localhost:5173	/auth
+20230330	20:34:03	b8ea6ba4-2c06-4836-991a-a167d35cf8f7	OPTIONS	http://localhost:5173	/auth
+20230330	20:34:09	de748cda-152a-414e-8834-911ef417cc23	OPTIONS	http://localhost:5173	/auth
+20230330	21:09:47	17f8b8b1-dd6f-4f53-b478-79cba2b80560	GET	undefined	/
+20230330	21:09:47	39f7f725-e24e-4897-8adc-9ecd75275a29	GET	undefined	/css/style.css
+20230330	21:09:47	7cc96464-bf43-4f39-a344-bbea928a1de1	GET	undefined	/favicon.ico

@@ -6,7 +6,6 @@ const usersDB = {
 };
 
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 const fsPromises = require("fs").promises;
 const path = require("path");
 
@@ -24,7 +23,7 @@ async function handleLogin(req, res) {
   // evaluate pwd
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
-    const roles = Object.values(foundUser.roles);
+    const roles = Object.values(foundUser.roles).filter(Boolean);
     // jwt configuration
     const accessToken = jwt.sign(
       {
