@@ -39,11 +39,10 @@ async function handleLogin(req, res) {
 
     // Creates Secure Cookie with refresh token
     res.cookie("jwt", refreshToken, {
-      // unavailable to JS
       httpOnly: true,
       sameSite: "None",
       maxAge: 24 * 60 * 60 * 1000,
-    }); // for Chrome: secure: true (before maxAge)
+    }); // add secure: true (before sameSite) for production
 
     // Send authorization roles and access token to user
     res.json({ roles, accessToken });
