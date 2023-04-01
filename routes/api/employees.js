@@ -9,7 +9,7 @@ router
   .get(employeesController.getAllEmployees)
   .post(
     verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor),
-    employeesController.updateEmployee
+    employeesController.createNewEmployee
   )
   .put(
     verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor),
