@@ -4,6 +4,7 @@ node_modules
 #Logs
 reqLog.txt
 errLog.txt
+log.txt
 
 # Local Netlify folder
 .netlify
