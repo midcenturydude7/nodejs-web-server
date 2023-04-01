@@ -1,24 +1,24 @@
 const User = require("../model/User");
 
 async function handleLogout(req, res) {
-  // on client, also delete the access token
+  // On client, also delete the accessToken
   const cookies = req.cookies;
-  if (!cookies?.jwt) return res.sendStatus(204); // successful request, not sending content back;
+  if (!cookies?.jwt) return res.sendStatus(204); //No content
   const refreshToken = cookies.jwt;
 
-  // is refreshToken in db?
+  // Is refreshToken in db?
   const foundUser = await User.findOne({ refreshToken }).exec();
   if (!foundUser) {
-    res.clearCookie("jwt", { httpOnly: true });
+    res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
     return res.sendStatus(204);
   }
 
-  // delete refreshToken in db
+  // Delete refreshToken in db
   foundUser.refreshToken = "";
   const result = await foundUser.save();
   console.log(result);
 
-  res.clearCookie("jwt", { httpOnly: true }); // secure: true - only serves on https
+  res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
   res.sendStatus(204);
 }
 
