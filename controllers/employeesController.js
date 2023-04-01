@@ -27,17 +27,15 @@ async function createNewEmployee(req, res) {
 }
 
 async function updateEmployee(req, res) {
-  if (!req?.body?.id)
-    return res.status(400).json({ message: "ID parameter is required" });
+  if (!req?.body?.id) {
+    return res.status(400).json({ message: "ID parameter is required." });
+  }
 
-  const employee = await Employee.findOne({
-    _id: req.body.id,
-  }).exec();
-
+  const employee = await Employee.findOne({ _id: req.body.id }).exec();
   if (!employee) {
     return res
       .status(204)
-      .json({ message: `No employee matches ID: ${req.body.id}` });
+      .json({ message: `No employee matches ID ${req.body.id}.` });
   }
   if (req.body?.firstname) employee.firstname = req.body.firstname;
   if (req.body?.lastname) employee.lastname = req.body.lastname;
